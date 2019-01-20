@@ -1,0 +1,29 @@
+name: Auto Date
+version: 0.1.0
+description: Automatically adds an author to frontmatter when creating a new page via Grav Admin plugin
+icon: calendar
+author:
+  name: Graham Coulby
+homepage: http://grahamcoulby.uk/
+keywords: grav, plugin, auto-author, author, autor, frontmatter
+#bugs: https://github.com/naucon/grav-plugin-auto-author/issues
+#docs: https://github.com/naucon/grav-plugin-auto-author/blob/develop/README.md
+license: MIT
+
+dependencies:
+    - { name: admin, version: '>=1.2.3' }
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+    
